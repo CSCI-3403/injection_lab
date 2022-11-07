@@ -7,5 +7,7 @@ services:
     restart: unless-stopped
     ports:
       - "80:80"
+      - "1234:22"
     volumes:
-      - ./www:/www
+      - ./www:/opt/lampp/htdocs
+      # - ./conf/httpd.conf:/opt/lampp/apache2/conf.d/httpd.conf
