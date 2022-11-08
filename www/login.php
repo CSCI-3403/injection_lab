@@ -54,7 +54,7 @@ if (isset($_POST["login"])) {
                     <div class="field">
                     <label for="" class="label is-size-2">Username</label>
                     <div class="control has-icons-left">
-                        <input type="username" name="username" placeholder="username" class="input is-size-4" value="<?php echo $_POST['username'] ?? "" ?>" required>
+                        <input type="username" name="username" placeholder="username" class="input is-size-4" value="<?php echo str_replace("\"", "&quot;", $_POST['username'] ?? "") ?>" required>
                         <span class="icon is-small is-size-4 is-left">
                         <i class="fa fa-user"></i>
                         </span>
